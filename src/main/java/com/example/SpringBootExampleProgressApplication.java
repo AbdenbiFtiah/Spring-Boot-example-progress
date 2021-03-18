@@ -17,20 +17,18 @@ public class SpringBootExampleProgressApplication implements CommandLineRunner {
 	
 	@Autowired
 	ClientRepository clientRepository;
-	
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootExampleProgressApplication.class, args);
 	}
 
-
 	@Override
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
 		DateFormat dateFormat= new SimpleDateFormat("dd/MM/yyyy");
-		clientRepository.save(new Client("Abden","Abden@gmail.com",2321,true,(Date) dateFormat.parse("11/12/2012")));
-		clientRepository.save(new Client("Hassan","Hassan@gmail.com",2111,true,(Date) dateFormat.parse("10/12/2012")));
-		clientRepository.save(new Client("Mouna","Mouna@gmail.com",9921,true,(Date) dateFormat.parse("12/12/2012")));
+		clientRepository.save(new Client("Abden","Abden@gmail.com",2321,true, dateFormat.parse("11/12/2012")));
+		clientRepository.save(new Client("Hassan","Hassan@gmail.com",2111,true, dateFormat.parse("10/12/2012")));
+		clientRepository.save(new Client("Mouna","Mouna@gmail.com",9921,false, dateFormat.parse("12/12/2012")));
 
 
 		

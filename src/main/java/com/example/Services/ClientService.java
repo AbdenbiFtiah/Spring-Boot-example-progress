@@ -25,8 +25,7 @@ public class ClientService {
 	}
 	
 	public List<Client> getActiveClients(){
-//		return clientRepository.findby
-		return null;
+		return clientRepository.getActiveClients();
 		
 	}
 
